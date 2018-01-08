@@ -1,4 +1,4 @@
-import {Comlink} from './../node_modules/comlinkjs/comlink.es6.js';
+import { Comlink } from 'https://cdn.jsdelivr.net/npm/comlinkjs@2.3/comlink.global.min.js';
 
 const fetchWorker = new Worker('./../src/fetch.worker.js');
 
