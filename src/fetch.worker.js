@@ -61,4 +61,4 @@ class Fetch {
     }
 }
 
-Comlink.expose({ Backend }, self);
+Comlink.expose({ Fetch }, self);
