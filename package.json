@@ -1,6 +1,6 @@
 {
   "name": "comlink-fetch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Web worker fetch wrapper using comlink ",
   "main": "src/fetch.worker.js",
   "directories": {
