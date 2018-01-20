@@ -1,6 +1,6 @@
 importScripts('https://cdn.jsdelivr.net/npm/comlinkjs@2.3/comlink.global.min.js');
 
-class Backend {
+class Fetch {
     constructor() {
         this._baseUrl = "";
         this._defaultHeaders = {};

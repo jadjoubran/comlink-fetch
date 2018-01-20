@@ -1,21 +1,21 @@
 import { Comlink } from 'https://cdn.jsdelivr.net/npm/comlinkjs@2.3/comlink.global.min.js';
 
-const fetchWorker = new Worker('./../src/fetch.worker.js');
+const worker = new Worker('./../src/fetch.worker.js');
 
-const api = Comlink.proxy(fetchWorker);
+const proxy = Comlink.proxy(worker);
 
 async function init() {
-    const backend = await new api.Backend();
+    const Fetch = await new proxy.Fetch();
 
-    backend.setBaseUrl("https://jsonplaceholder.typicode.com/");
-    backend.setDefaultHeaders({'Content-Type': 'application/json'});
-    backend.setDefaultBody({lang: 'en'});
+    Fetch.setBaseUrl("https://jsonplaceholder.typicode.com/");
+    Fetch.setDefaultHeaders({'Content-Type': 'application/json'});
+    Fetch.setDefaultBody({lang: 'en'});
 
-    backend.get('users/1');
-    backend.get('users/2');
-    backend.post('posts/3');
-    backend.put('posts/4');
-    backend.delete('posts/5');
+    Fetch.get('users/1');
+    Fetch.get('users/2');
+    Fetch.post('posts/3');
+    Fetch.put('posts/4');
+    Fetch.delete('posts/5');
 };
 
 
