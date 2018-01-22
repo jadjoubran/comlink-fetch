@@ -5,17 +5,17 @@ const worker = new Worker('./../src/fetch.worker.js');
 const proxy = Comlink.proxy(worker);
 
 async function init() {
-    const Fetch = await new proxy.Fetch();
+    const API = await new proxy.Fetch();
 
-    Fetch.setBaseUrl("https://jsonplaceholder.typicode.com/");
-    Fetch.setDefaultHeaders({'Content-Type': 'application/json'});
-    Fetch.setDefaultBody({lang: 'en'});
+    API.setBaseUrl("https://jsonplaceholder.typicode.com/");
+    API.setDefaultHeaders({'Content-Type': 'application/json'});
+    API.setDefaultBody({lang: 'en'});
 
-    Fetch.get('users/1');
-    Fetch.get('users/2');
-    Fetch.post('posts/3');
-    Fetch.put('posts/4');
-    Fetch.delete('posts/5');
+    API.get('users/1');
+    API.get('users/2');
+    API.post('posts/3');
+    API.put('posts/4');
+    API.delete('posts/5');
 };
 
 

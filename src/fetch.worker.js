@@ -50,7 +50,6 @@ class Fetch {
     }
 
     async _send(method, endpoint = '', body = undefined, headers = {}) {
-        console.log(JSON.stringify({ ...this.getDefaultBody(), ...body }));
         const response = await fetch(this.getBaseUrl() + endpoint, {
             method,
             headers: { ...this.getDefaultHeaders(), ...headers },
