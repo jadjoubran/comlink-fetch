@@ -38,15 +38,15 @@ class Fetch {
     }
 
     async post(endpoint = '', body = undefined, headers = {}) {
-        this._send('POST', endpoint, body, headers);
+        return await this._send('POST', endpoint, body, headers);
     }
 
     async put(endpoint = '', body = undefined, headers = {}) {
-        this._send('PUT', endpoint, body, headers);
+        return await this._send('PUT', endpoint, body, headers);
     }
 
     async delete(endpoint = '', body = undefined, headers = {}) {
-        this._send('DELETE', endpoint, body, headers);
+        return await this._send('DELETE', endpoint, body, headers);
     }
 
     async _send(method, endpoint = '', body = undefined, headers = {}) {
