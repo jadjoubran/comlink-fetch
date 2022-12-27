@@ -1,4 +1,4 @@
-importScripts('https://cdn.jsdelivr.net/npm/comlinkjs@2.3/comlink.global.min.js');
+importScripts('https://unpkg.com/comlink/dist/umd/comlink.js');
 
 class Fetch {
     constructor() {
